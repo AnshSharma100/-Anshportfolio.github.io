@@ -6,13 +6,12 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background: #121212;
     color: #fff;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Header Section */
 header {
     background: #1a1a1a;
     padding: 50px 20px;
@@ -20,37 +19,39 @@ header {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.title-container h1 {
+header h1 {
     font-size: 2.5rem;
 }
 
-.title-container p {
+header p {
     font-size: 1.2rem;
 }
 
-.theme-toggle {
+header .theme-toggle {
     background: none;
     border: none;
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
+    padding: 5px 15px;
     transition: transform 0.3s;
 }
 
-.theme-toggle:hover {
+header .theme-toggle:hover {
     transform: scale(1.2);
 }
 
-/* Section Styles */
-.section {
+section {
     padding: 60px 20px;
     text-align: center;
+    transition: all 0.3s;
 }
 
 #about-me img {
     border-radius: 50%;
-    width: 150px;
+    width: 150px;  /* Adjusted size */
     margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .project-list {
@@ -67,6 +68,7 @@ header {
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     text-align: left;
+    transition: transform 0.3s;
 }
 
 .project-card h3 {
@@ -77,7 +79,6 @@ header {
     font-size: 1rem;
 }
 
-/* Light Mode Styles */
 body.light {
     background: #fff;
     color: #121212;
@@ -114,12 +115,20 @@ footer {
     background: #1a1a1a;
 }
 
-/* Game/3D Interaction */
-#game {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
+body.light footer {
+    background: #f1f1f1;
+    color: #121212;
 }
+
+/* Animations for sections */
+section {
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+section.visible {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+

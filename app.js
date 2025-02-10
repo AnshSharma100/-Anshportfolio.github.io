@@ -1,44 +1,20 @@
-// Simple 3D Object using Three.js
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
-
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
-
-camera.position.z = 5;
-
-function animate() {
-    requestAnimationFrame(animate);
-
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-
-    renderer.render(scene, camera);
-}
-
-animate();
-
-// Theme toggle function
+// Light/Dark Mode Toggle
 function toggleTheme() {
+    const themeButton = document.getElementById("theme-toggle");
     document.body.classList.toggle('light');
+    if (document.body.classList.contains('light')) {
+        themeButton.innerText = "🌚"; // Change button icon to Dark Mode
+    } else {
+        themeButton.innerText = "🌙"; // Change button icon to Light Mode
+    }
 }
 
-// Game-like Navigation (Example - Scrolling animation)
+// Detect visible sections
 window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('.section');
+    const sections = document.querySelectorAll('section');
     sections.forEach((section) => {
         if (section.getBoundingClientRect().top <= window.innerHeight) {
-            section.style.transform = 'translateY(0)';
-            section.style.opacity = '1';
-            section.style.transition = 'all 0.5s ease';
-        } else {
-            section.style.transform = 'translateY(30px)';
-            section.style.opacity = '0';
+            section.classList.add('visible');
         }
     });
 });
