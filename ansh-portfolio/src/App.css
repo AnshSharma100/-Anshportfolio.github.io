@@ -1,0 +1,70 @@
+/* Global Styles */
+.app {
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.theme-toggle:hover {
+  background-color: #34495e;
+}
+
+/* Light Theme */
+.app.light {
+  background-color: #fff;
+  color: #2c3e50;
+}
+
+.app.light .theme-toggle {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.app.light h1, .app.light p {
+  color: #2c3e50;
+}
+
+.app.light .project-card {
+  background-color: #ecf0f1;
+}
+
+.app.light .footer {
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* Dark Theme */
+.app.dark {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.app.dark .theme-toggle {
+  background-color: white;
+  color: #2c3e50;
+}
+
+.app.dark h1, .app.dark p {
+  color: white;
+}
+
+.app.dark .project-card {
+  background-color: #34495e;
+}
+
+.app.dark .footer {
+  background-color: #34495e;
+  color: white;
+}

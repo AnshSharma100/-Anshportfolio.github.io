@@ -1,0 +1,57 @@
+.about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .profile-image {
+    width: 150px; /* Adjust size to your preference */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #502c2c;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  
+  @media (min-width: 768px) {
+    .profile-section {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .profile-image {
+      margin-right: 30px;
+      width: 200px;
+      height: 200px;
+    }
+  
+    .intro-text {
+      text-align: left;
+      max-width: 700px;
+    }
+  }
+  
