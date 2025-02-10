@@ -48,6 +48,9 @@ const ContactForm = () => {
           required
         />
         <button type="submit">Send Message</button>
+
+        <h3></h3>
+        <button type = "Link">LinkedIn</button>
       </form>
     </div>
   );
