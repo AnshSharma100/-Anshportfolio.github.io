@@ -1,0 +1,125 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header Section */
+header {
+    background: #1a1a1a;
+    padding: 50px 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.title-container h1 {
+    font-size: 2.5rem;
+}
+
+.title-container p {
+    font-size: 1.2rem;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#about-me img {
+    border-radius: 50%;
+    width: 150px;
+    margin-top: 20px;
+}
+
+.project-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: #333;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+}
+
+/* Light Mode Styles */
+body.light {
+    background: #fff;
+    color: #121212;
+}
+
+body.light header {
+    background: #f1f1f1;
+}
+
+body.light .project-card {
+    background: #e0e0e0;
+}
+
+body.light .btn {
+    background-color: #5C6BC0;
+    color: #fff;
+}
+
+/* Buttons */
+#resume .btn {
+    background-color: #5C6BC0;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background: #1a1a1a;
+}
+
+/* Game/3D Interaction */
+#game {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
