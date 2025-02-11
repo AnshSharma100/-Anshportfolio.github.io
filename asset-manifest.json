@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/-Anshportfolio.github.io/static/css/main.d5946890.css",
+    "main.js": "/-Anshportfolio.github.io/static/js/main.85fc70f3.js",
+    "static/media/potfoliopfp.jpg": "/-Anshportfolio.github.io/static/media/potfoliopfp.32113952e30187706a8a.jpg",
+    "index.html": "/-Anshportfolio.github.io/index.html",
+    "main.d5946890.css.map": "/-Anshportfolio.github.io/static/css/main.d5946890.css.map",
+    "main.85fc70f3.js.map": "/-Anshportfolio.github.io/static/js/main.85fc70f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5946890.css",
+    "static/js/main.85fc70f3.js"
+  ]
+}
