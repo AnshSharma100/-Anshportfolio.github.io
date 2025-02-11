@@ -5,19 +5,19 @@ const projectsData = [
   {
     title: 'OPTIC-net',
     description: 'AI-powered platform for diabetic retinopathy detection.',
-    videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID', // Replace with actual video link
-    githubUrl: 'https://github.com/YOUR_GITHUB/OPTIC-net',
+    videoUrl: '/OpticNet video.mp4', // Public folder reference
+    githubUrl: 'https://github.com/AnshSharma100/OpticNet',
   },
   {
     title: 'CarIQ',
     description: 'An iOS app that integrates AI to analyze vehicle data.',
-    videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
+    videoUrl: '/CarIQ Video.mov', // Public folder reference
     githubUrl: 'https://github.com/diyabhtt/CarIQ',
   },
   {
     title: 'LifeBoat AI',
     description: 'AI system designed for rescue missions and emergency response.',
-    videoUrl: 'https://www.youtube.com/embed/YOUR_VIDEO_ID',
+    videoUrl: '', // No video provided yet
     githubUrl: 'https://github.com/YOUR_GITHUB/LifeBoatAI',
   },
 ];
@@ -41,13 +41,14 @@ const Projects = () => {
         <div className="project-details">
           <button className="back-button" onClick={() => setSelectedProject(null)}>← Back</button>
           <h2>{selectedProject.title}</h2>
-          <iframe 
-            className="project-video" 
-            src={selectedProject.videoUrl} 
-            title={selectedProject.title} 
-            frameBorder="0" 
-            allowFullScreen
-          ></iframe>
+          {selectedProject.videoUrl ? (
+            <video className="project-video" controls>
+              <source src={selectedProject.videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : (
+            <p>No video available.</p>
+          )}
           <p>{selectedProject.description}</p>
           <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="github-link">
             View on GitHub
