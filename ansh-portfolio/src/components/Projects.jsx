@@ -5,13 +5,13 @@ const projectsData = [
   {
     title: 'OPTIC-net',
     description: 'AI-powered platform for diabetic retinopathy detection.',
-    videoUrl: '/OpticNet video.mp4', // Public folder reference
+    videoUrl: process.env.PUBLIC_URL + '/OpticNetvideo.mp4', 
     githubUrl: 'https://github.com/AnshSharma100/OpticNet',
   },
   {
     title: 'CarIQ',
     description: 'An iOS app that integrates AI to analyze vehicle data.',
-    videoUrl: '/CarIQ Video.mov', // Public folder reference
+    videoUrl: process.env.PUBLIC_URL + '/CarIQVideo.mp4', 
     githubUrl: 'https://github.com/diyabhtt/CarIQ',
   },
   {
@@ -21,6 +21,7 @@ const projectsData = [
     githubUrl: 'https://github.com/YOUR_GITHUB/LifeBoatAI',
   },
 ];
+
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -42,9 +43,9 @@ const Projects = () => {
           <button className="back-button" onClick={() => setSelectedProject(null)}>← Back</button>
           <h2>{selectedProject.title}</h2>
           {selectedProject.videoUrl ? (
-            <video className="project-video" controls>
+            <video className="project-video" controls onError={(e) => e.target.style.display = 'none'}>
               <source src={selectedProject.videoUrl} type="video/mp4" />
-              Your browser does not support the video tag.
+              Your browser does not support this video format.
             </video>
           ) : (
             <p>No video available.</p>
