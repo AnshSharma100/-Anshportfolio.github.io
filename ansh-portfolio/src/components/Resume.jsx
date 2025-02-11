@@ -6,7 +6,7 @@ const Resume = () => {
     <div className="resume">
       <h2>My Resume</h2>
       <p>View my resume below:</p>
-      <a href="/AnshSharma-Resume.pdf" target="_blank" rel="noopener noreferrer">
+      <a href={process.env.PUBLIC_URL + "/AnshSharma-Resume.pdf"} target="_blank" rel="noopener noreferrer">
         Open Resume
       </a>
     </div>
