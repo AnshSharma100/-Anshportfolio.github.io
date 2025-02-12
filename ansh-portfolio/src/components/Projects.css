@@ -38,12 +38,14 @@ h2 {
 .project-card h3 {
   font-size: 1.8rem;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .project-card p {
   font-size: 1rem;
   color: #7f8c8d;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* Project Details Page */
