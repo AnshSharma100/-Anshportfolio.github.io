@@ -5,23 +5,22 @@ const projectsData = [
   {
     title: 'OPTIC-net',
     description: 'AI-powered platform for diabetic retinopathy detection.',
-    videoUrl: process.env.PUBLIC_URL + '/OpticNetvideo.mp4', 
+    videoUrl: `${process.env.PUBLIC_URL}/videos/OpticNetvideo.mp4`, 
     githubUrl: 'https://github.com/AnshSharma100/OpticNet',
   },
   {
     title: 'CarIQ',
     description: 'An iOS app that integrates AI to analyze vehicle data.',
-    videoUrl: process.env.PUBLIC_URL + '/CarIQVideo.mp4', 
+    videoUrl: `${process.env.PUBLIC_URL}/videos/CarIQVideo.mp4`, 
     githubUrl: 'https://github.com/diyabhtt/CarIQ',
   },
   {
     title: 'Curio',
-    description: 'A medical Web App that lets you comunicate with AI to figure out symptoms',
-    videoUrl: process.env.PUBLIC_URL + '/CurioVideo.mp4', 
+    description: 'A medical Web App that lets you communicate with AI to figure out symptoms.',
+    videoUrl: `${process.env.PUBLIC_URL}/videos/CurioVideo.mp4`, 
     githubUrl: 'https://github.com/AnshSharma100/Curio',
   },
 ];
-
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
