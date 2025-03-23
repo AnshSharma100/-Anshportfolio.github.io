@@ -15,10 +15,10 @@ const projectsData = [
     githubUrl: 'https://github.com/diyabhtt/CarIQ',
   },
   {
-    title: 'LifeBoat AI',
-    description: 'AI system designed for rescue missions and emergency response.',
-    videoUrl: '', // No video provided yet
-    githubUrl: 'https://github.com/YOUR_GITHUB/LifeBoatAI',
+    title: 'Curio',
+    description: 'A medical Web App that lets you comunicate with AI to figure out symptoms',
+    videoUrl: process.env.PUBLIC_URL + '/CurioVideo.mp4', 
+    githubUrl: 'https://github.com/AnshSharma100/Curio',
   },
 ];
 
