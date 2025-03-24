@@ -52,7 +52,7 @@ const Projects = () => {
           <p>{selectedProject.description}</p>
           <a href={selectedProject.githubUrl} target="_blank" rel="noopener noreferrer" className="github-link">
             View on GitHub
-          </a>
+          </a> 
         </div>
       )}
     </div>
