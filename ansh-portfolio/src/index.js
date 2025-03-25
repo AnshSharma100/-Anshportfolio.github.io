@@ -1,11 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async'; // Correct way to use Helmet
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom'; // Import the Router here
 
-ReactDOM.render(
-  <Router> {/* Wrap the entire app with the Router */}
-    <App />
-  </Router>,
-  document.getElementById('root')
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+  <HelmetProvider>
+    <Router>
+      <App />
+    </Router>
+  </HelmetProvider>
 );
