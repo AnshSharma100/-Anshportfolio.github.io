@@ -54,9 +54,6 @@ const ContactForm = () => {
         />
         <button type="submit">Send Message</button>
       </form>
-      <a href="https://www.linkedin.com/in/ansh-sharma-softwareengineer" target="_blank" rel="noopener noreferrer">
-        <button>LinkedIn</button>
-      </a>
     </div>
   );
 };

@@ -3,7 +3,6 @@ import './App.css';
 import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import ContactForm from './components/ContactForm';
-import Footer from './components/Footer';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
 
@@ -15,7 +14,6 @@ const App = () => {
       <Projects />
       <ContactForm />
       <Resume />
-      <Footer />
     </div>
   );
 };
