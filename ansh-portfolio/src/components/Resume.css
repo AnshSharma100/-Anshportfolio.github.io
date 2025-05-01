@@ -24,4 +24,15 @@
     background-color: #34495e;
     color:  #ffffff;
   }
-  
+
+  .resume-btn {
+    font-weight: bold;
+  }
+
+  .linkedin-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -3px; 
+  }
