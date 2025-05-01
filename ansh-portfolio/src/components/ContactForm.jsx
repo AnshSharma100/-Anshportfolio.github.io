@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 
 const ContactForm = () => {
@@ -18,7 +19,27 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Message Sent!');
+
+    const serviceID = 'service_uxeyrc7';
+    const templateID = 'template_ur87yjg';
+    const userID = 'tUwXTNM6V_h0PuADk';
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+      title: 'New Message From Portfolio',
+      time: new Date().toLocaleString(),
+    };
+
+    emailjs.send(serviceID, templateID, templateParams, userID)
+      .then((result) => {
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+      }, (error) => {
+        alert('Failed to send the message, please try again.');
+        console.error('EmailJS error:', error);
+      });
   };
 
   return (
@@ -33,7 +54,7 @@ const ContactForm = () => {
           type="text"
           name="name"
           placeholder="Your Name"
-          value={formData.name} 
+          value={formData.name}
           onChange={handleInputChange}
           required
         />
