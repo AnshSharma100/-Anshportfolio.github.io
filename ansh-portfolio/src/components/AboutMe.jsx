@@ -15,8 +15,7 @@ const AboutMe = () => {
         <div className="intro-text">
           <h2>Hi, I'm Ansh Sharma</h2>
           <p>
-            I'm a Software Engineering student at the University of Texas at Dallas, passionate about AI and software development. 
-            I've worked on AI-powered projects such as OPTIC-net, and I'm eager to connect and explore new opportunities.
+            I'm a Software Engineering student at the University of Texas at Dallas with a deep interest in AI, systems programming, and applied machine learning. I enjoy building high-impact tools, from intelligent assistants to low-level performance-driven software. I'm currently focused on research and development that bridges software engineering with machine learning, and I’m always eager to take on technically challenging and meaningful work.
           </p>
         </div>
       </div>
