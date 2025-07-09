@@ -21,6 +21,11 @@ const Resume = () => {
           <a href={resumePath} target="_blank" rel="noopener noreferrer" className="resume-btn">Open Resume</a>
           <span className="linkedin-label">Press to open Resume</span>
         </div>
+        <div style={{ width: '2px', height: '40px', background: '#ccc', margin: '0 24px' }}></div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <a href="https://github.com/AnshSharma100" target="_blank" rel="noopener noreferrer" className="linkedin-btn">GitHub</a>
+          <span className="linkedin-label">Press to open GitHub</span>
+        </div>
       </div>
     </div>
   );
