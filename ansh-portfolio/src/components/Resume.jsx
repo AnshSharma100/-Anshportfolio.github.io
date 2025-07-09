@@ -25,6 +25,7 @@ const Resume = () => {
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <a href="https://github.com/AnshSharma100" target="_blank" rel="noopener noreferrer" className="linkedin-btn">GitHub</a>
           <span className="linkedin-label">Press to open GitHub</span>
+          
         </div>
       </div>
     </div>
